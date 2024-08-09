@@ -8,7 +8,7 @@ import os
 
 def crear_app():
     app = Flask(__name__)
-    mongo_uri = os.getenv("MONGO_URI")
+    mongo_uri = os.getenv("MONGO_URI", "mongodb+srv://badjuan453:Badillo12@cluster0.roexaww.mongodb.net/Integradora")
     cliente = MongoClient(mongo_uri)
     app.db = cliente['Integradora']
 
