@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ discusion.titulo }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+{% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+                <div class="flash-message {{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+
+    <header>
+        <h1>{{ discusion.titulo }}</h1>
+        <form action="{{ url_for('search_static') }}" method="get" class="search-form">
+            <input type="text" name="query" placeholder="Buscar..." required>
+            <button type="submit">Buscar</button>
+        </form>
+        <a href="{{ url_for('listar_discusiones') }}">Regresar a Lista de Discusiones</a>
+    </header>
+    <main>
+        <div class="discussion">
+            <p>{{ discusion.contenido }}</p>
+            <p class="meta">Autor: {{ autores[discusion.autor] }}</p>
+            <p class="meta">Fecha de creación: {{ discusion.fecha_creacion.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+        </div>
+
+        <div class="comments">
+            <h2>Comentarios</h2>
+            <ul>
+                {% for comentario in comentarios %}
+                    <li>
+                        <p>{{ comentario.contenido }}</p>
+                        <p class="meta">Autor: {{ autores[comentario.autor] }}</p>
+                        <p class="meta">Fecha de creación: {{ comentario.fecha_creacion.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <h3>Agregar Comentario</h3>
+        <form method="post" action="{{ url_for('agregar_comentario', id=discusion._id) }}">
+            <textarea name="contenido" required></textarea><br>
+            <button type="submit">Comentar</button>
+        </form>
+    </main>
+</body>
+</html>

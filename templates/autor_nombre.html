@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Discusiones</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Lista de Discusiones</h1>
+    </header>
+    <main>
+        <ul>
+            {% for discusion in discusiones %}
+                {% set autor_nombre = autores.get(str(discusion.autor), 'Desconocido') %}
+                <li>
+                    <a href="{{ url_for('ver_discusion', id=discusion._id) }}">{{ discusion.titulo }}</a> por {{ autor_nombre }}
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>

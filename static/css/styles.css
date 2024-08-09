@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #444;
+}
+
+a {
+    color: #edeff2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Search Form */
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+.search-form button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #1558b0;
+}
+
+/* Discussion Styles */
+.discussion {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.discussion h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.discussion p {
+    margin: 10px 0;
+}
+
+.discussion .meta {
+    color: #888;
+    font-size: 0.9em;
+}
+
+/* Comment Styles */
+.comments {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.comments ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.comments ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.comments ul li:last-child {
+    border-bottom: none;
+}
+
+.comments .meta {
+    color: #888;
+    font-size: 0.9em;
+}
+
+/* Form Styles */
+form {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #1558b0;
+}
+
+/* Flash Messages */
+.flash-message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.flash-message.success {
+    background-color: #28a745;
+}
+
+.flash-message.error,
+.flash-message.danger {
+    background-color: #dc3545;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Button for Creating a New Discussion */
+.button.nueva-discusion {
+    background-color: #1a73e8;
+}
+
+.button.nueva-discusion:hover {
+    background-color: #1558b0;
+}
+
+/* Button for Viewing a Discussion */
+.button.ver-discusion {
+    background-color: #17a2b8;
+}
+
+.button.ver-discusion:hover {
+    background-color: #117a8b;
+}
+
+/* Button for Returning to List */
+.button.return {
+    background-color: #e0e0e0;
+    color: #333;
+    text-align: center;
+}
+
+.button.return:hover {
+    background-color: #ccc;
+}
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    color: #1a73e8;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.pagination a:hover {
+    background-color: #f4f4f4;
+    border-color: #ccc;
+}

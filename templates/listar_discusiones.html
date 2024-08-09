@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Lista de Discusiones</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="flash-message {{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    <header>
+        <h1>Lista de Discusiones</h1>
+        <a href="{{ url_for('nueva_discusion') }}" class="button nueva-discusion">Nueva Discusión</a>
+    </header>
+    <main>
+        <ul>
+            {% for discusion in discusiones %}
+                <li>
+                    <h2>{{ discusion.titulo }}</h2>
+                    <p>{{ discusion.contenido }}</p>
+                    {% set autor_nombre = autores[discusion.autor] %}
+                    <p>Autor: {{ autor_nombre }}</p>
+                    <a href="{{ url_for('ver_discusion', id=discusion._id) }}" class="button ver-discusion">Ver Discusión</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="pagination">
+            {% if page > 1 %}
+                <a href="{{ url_for('listar_discusiones', page=page-1) }}" class="button">Anterior</a>
+            {% endif %}
+            {% if (page * per_page) < total %}
+                <a href="{{ url_for('listar_discusiones', page=page+1) }}" class="button">Siguiente</a>
+            {% endif %}
+        </div>
+        <a href="{{ url_for('index') }}" class="button return">
+            <button class="return">Volver al Inicio</button>
+        </a>
+    </main>
+</body>
+</html>

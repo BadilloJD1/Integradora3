@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="min-h-screen bg-gray-900 text-white">
+
+    <!-- Barra de navegación -->
+    <header class="bg-gray-800 text-white">
+        <nav class="flex items-center justify-between px-6 py-4 md:px-12 md:py-6">
+            <div class="text-2xl font-bold">
+                <a href="{{ url_for('index') }}" class="hover:underline">BAK Threat Intelligence</a>
+            </div>
+            <div class="block md:hidden">
+                <button id="menu-toggle" class="text-gray-500 hover:text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="menu" class="hidden md:flex space-x-6">
+                <a href="{{ url_for('index') }}" class="nav-link hover:underline">Inicio</a>
+                <a href="{{ url_for('nosotros') }}" class="nav-link hover:underline">Nosotros</a>
+                <a href="{{ url_for('consejos_seguridad') }}" class="nav-link hover:underline">Consejos de seguridad</a>
+                <a href="{{ url_for('recursos') }}" class="nav-link hover:underline text-blue-400">Recursos</a>
+                <a href="{{ url_for('search_static') }}" class="nav-link hover:underline">Buscar</a>
+                <a href="{{ url_for('logout') }}" class="nav-link hover:underline text-red-500">Cerrar Sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="flex flex-col items-center justify-center px-6 py-12">
+        <h1 class="text-4xl font-bold">Recursos</h1>
+        <div class="mt-4 w-full max-w-4xl">
+            <p class="text-lg text-gray-700 leading-relaxed">
+                Aquí puedes encontrar una colección de recursos útiles relacionados con la ciberseguridad, incluyendo enlaces a artículos, herramientas, guías y más.
+            </p>
+            <ul class="mt-4 list-disc list-inside text-gray-700">
+                <!-- Artículos y Blogs sobre Ciberseguridad -->
+                <li><a href="https://www.cybersecurity-insider.com" class="text-blue-500 hover:underline">Guía completa sobre ciberseguridad</a></li>
+                <li><a href="https://www.securitymagazine.com" class="text-blue-500 hover:underline">Últimas tendencias en ciberseguridad</a></li>
+                <li><a href="https://www.darkreading.com" class="text-blue-500 hover:underline">Cómo proteger tu empresa de los ciberataques</a></li>
+                <!-- Herramientas de Seguridad -->
+                <li><a href="https://www.metasploit.com" class="text-blue-500 hover:underline">Metasploit Framework: Herramienta de pruebas de penetración</a></li>
+                <li><a href="https://www.wireshark.org" class="text-blue-500 hover:underline">Wireshark: Analizador de tráfico de red</a></li>
+                <li><a href="https://www.nessus.org" class="text-blue-500 hover:underline">Nessus: Escáner de vulnerabilidades</a></li>
+                <!-- Guías y Manuales -->
+                <li><a href="https://www.nist.gov/cyberframework" class="text-blue-500 hover:underline">Marco de ciberseguridad del NIST</a></li>
+                <li><a href="https://www.sans.org/security-resources/policies/general/pdf/acceptable-use-policy" class="text-blue-500 hover:underline">Política de uso aceptable (AUP)</a></li>
+                <li><a href="https://www.cisecurity.org/cis-benchmarks/" class="text-blue-500 hover:underline">Benchmarks del CIS para la configuración segura</a></li>
+                <!-- Videos y Webinars -->
+                <li><a href="https://www.youtube.com/c/infosecinstitute" class="text-blue-500 hover:underline">Canal de YouTube del Instituto de Seguridad de la Información</a></li>
+                <li><a href="https://www.crowdstrike.com/resources/webinars/" class="text-blue-500 hover:underline">Webinars de CrowdStrike</a></li>
+                <li><a href="https://www.cybersecuritysummit.com" class="text-blue-500 hover:underline">Cyber Security Summit: Conferencias y charlas</a></li>
+                <!-- Cursos y Formación -->
+                <li><a href="https://www.coursera.org/courses?query=cyber%20security" class="text-blue-500 hover:underline">Cursos de ciberseguridad en Coursera</a></li>
+                <li><a href="https://www.udemy.com/topic/cyber-security/" class="text-blue-500 hover:underline">Formación en ciberseguridad en Udemy</a></li>
+                <li><a href="https://www.sans.org/cyber-security-training/" class="text-blue-500 hover:underline">Formación de SANS en ciberseguridad</a></li>
+                <!-- Libros y Publicaciones -->
+                <li><a href="https://www.amazon.com/Cybersecurity-Basics-Kim-Crowther/dp/1119507643" class="text-blue-500 hover:underline">"Cybersecurity Essentials" de Kim Crowther</a></li>
+                <li><a href="https://www.oreilly.com/library/view/network-security-assessment/9781491911045/" class="text-blue-500 hover:underline">"Network Security Assessment" de Chris McNab</a></li>
+                <li><a href="https://www.packtpub.com/product/learning-metasploit-exploit/9781788995238" class="text-blue-500 hover:underline">"Learning Metasploit Exploit Development" de Monika Sangwan</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="flex items-center justify-between px-6 py-4 bg-gray-800">
+        <p class="text-sm">© 2024 BAK Threat Intelligence</p>
+        <div class="flex space-x-4">
+            <a href="#" class="hover:underline">Twitter</a>
+            <a href="#" class="hover:underline">LinkedIn</a>
+            <a href="#" class="hover:underline">Facebook</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript para el menú móvil -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

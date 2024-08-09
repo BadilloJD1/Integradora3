@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mejores Prácticas para Mantenerse Seguro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gray-900 text-white">
+
+    <!-- Barra de navegación -->
+    <header class="flex items-center justify-between px-6 py-4 bg-gray-800">
+        <div class="text-2xl font-bold">BAK Threat Intelligence</div>
+        <nav class="hidden md:flex space-x-6">
+            <a href="{{ url_for('index') }}" class="hover:underline">Inicio</a>
+            <a href="{{ url_for('nosotros') }}" class="hover:underline">Nosotros</a>
+            <a href="{{ url_for('consejos_seguridad') }}" class="hover:underline">Consejos de seguridad</a>
+            <a href="{{ url_for('recursos') }}" class="hover:underline">Recursos</a>
+            <a href="{{ url_for('search_static') }}" class="hover:underline">Buscar</a>
+            <a href="{{ url_for('logout') }}" class="hover:underline text-red-500">Cerrar Sesión</a>
+        </nav>
+        <div class="md:hidden">
+            <button onclick="toggleMenu()" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <div id="nav-menu" class="hidden md:hidden flex-col items-center bg-gray-800 text-white">
+        <a href="{{ url_for('index') }}" class="block px-4 py-2 hover:bg-gray-700">Inicio</a>
+        <a href="{{ url_for('nosotros') }}" class="block px-4 py-2 hover:bg-gray-700">Nosotros</a>
+        <a href="{{ url_for('consejos_seguridad') }}" class="block px-4 py-2 hover:bg-gray-700">Consejos de seguridad</a>
+        <a href="{{ url_for('recursos') }}" class="block px-4 py-2 hover:bg-gray-700">Recursos</a>
+        <a href="{{ url_for('mejores_practicas') }}" class="block px-4 py-2 hover:bg-gray-700">Mejores Prácticas</a>
+        <a href="{{ url_for('search_static') }}" class="block px-4 py-2 hover:bg-gray-700">Buscar</a>
+        <a href="{{ url_for('logout') }}" class="block px-4 py-2 hover:bg-gray-700 text-red-500">Cerrar Sesión</a>
+    </div>
+
+    <!-- Contenido principal -->
+    <main class="flex flex-col items-center justify-center px-6 py-12">
+        <h1 class="text-4xl font-bold">Mejores Prácticas para Mantenerse Seguro</h1>
+        <div class="mt-4">
+            <p class="text-lg text-gray-700 leading-relaxed">
+                Mantenerse seguro en el mundo digital requiere adoptar prácticas recomendadas para proteger tu información y sistemas. Aquí te presentamos algunas de las mejores prácticas para asegurar tu entorno digital:
+            </p>
+            <ul class="list-disc list-inside mt-4 text-gray-700">
+                <li><strong>Usa Contraseñas Fuertes:</strong> Utiliza contraseñas únicas y complejas para cada cuenta.</li>
+                <li><strong>Habilita la Autenticación de Dos Factores:</strong> Agrega una capa adicional de seguridad a tus cuentas.</li>
+                <li><strong>Actualiza Regularmente tus Software:</strong> Asegúrate de que tu sistema operativo y aplicaciones estén actualizados.</li>
+                <li><strong>Ten Cuidado con los Correos Electrónicos de Phishing:</strong> No hagas clic en enlaces ni descargues archivos de fuentes no confiables.</li>
+                <li><strong>Utiliza un Antivirus Confiable:</strong> Mantén tu sistema protegido contra malware y virus.</li>
+                <li><strong>Realiza Copias de Seguridad:</strong> Asegúrate de respaldar tus datos regularmente.</li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="flex items-center justify-between px-6 py-4 bg-gray-800">
+        <p class="text-sm">© 2024 BAK Threat Intelligence</p>
+        <div class="flex space-x-4">
+            <a href="#" class="hover:underline">Twitter</a>
+            <a href="#" class="hover:underline">LinkedIn</a>
+            <a href="#" class="hover:underline">Facebook</a>
+        </div>
+    </footer>
+
+</body>
+</html>

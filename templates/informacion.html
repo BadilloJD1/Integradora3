@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Más sobre Ciberseguridad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gray-900 text-white">
+
+    <!-- Barra de navegación -->
+    <header class="flex items-center justify-between px-6 py-4 bg-gray-800">
+        <div class="text-2xl font-bold">BAK Threat Intelligence</div>
+        <nav class="hidden md:flex space-x-6">
+            <a href="{{ url_for('index') }}" class="hover:underline">Inicio</a>
+            <a href="{{ url_for('nosotros') }}" class="hover:underline">Nosotros</a>
+            <a href="{{ url_for('consejos_seguridad') }}" class="hover:underline">Consejos de seguridad</a>
+            <a href="{{ url_for('recursos') }}" class="hover:underline">Recursos</a>
+            <a href="{{ url_for('search_static') }}" class="hover:underline">Buscar</a>
+            <a href="{{ url_for('logout') }}" class="hover:underline text-red-500">Cerrar Sesión</a>
+        </nav>
+        <div class="md:hidden">
+            <button onclick="toggleMenu()" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <div id="nav-menu" class="hidden md:hidden flex-col items-center bg-gray-800 text-white">
+        <a href="{{ url_for('index') }}" class="block px-4 py-2 hover:bg-gray-700">Inicio</a>
+        <a href="{{ url_for('nosotros') }}" class="block px-4 py-2 hover:bg-gray-700">Nosotros</a>
+        <a href="{{ url_for('consejos_seguridad') }}" class="block px-4 py-2 hover:bg-gray-700">Consejos de seguridad</a>
+        <a href="{{ url_for('recursos') }}" class="block px-4 py-2 hover:bg-gray-700">Recursos</a>
+        <a href="{{ url_for('search_static') }}" class="block px-4 py-2 hover:bg-gray-700">Buscar</a>
+        <a href="{{ url_for('logout') }}" class="block px-4 py-2 hover:bg-gray-700 text-red-500">Cerrar Sesión</a>
+    </div>
+
+    <!-- Contenido principal -->
+    <main class="flex flex-col items-center justify-center px-6 py-12">
+        <h1 class="text-4xl font-bold">Aprende Más sobre Ciberseguridad</h1>
+        <p class="mt-4 text-lg text-gray-700">
+            La ciberseguridad es crucial en el mundo digital de hoy. En esta sección, te proporcionaremos información detallada sobre diversos aspectos de la ciberseguridad para ayudarte a protegerte en línea.
+        </p>
+
+        <section class="mt-8 w-full md:w-2/3">
+            <h2 class="text-2xl font-semibold">Conceptos Básicos</h2>
+            <p class="mt-2">
+                Aquí aprenderás sobre los conceptos fundamentales de ciberseguridad, como firewalls, malware, phishing y más.
+            </p>
+            <!-- Añadir más contenido aquí -->
+        </section>
+
+        <section class="mt-8 w-full md:w-2/3">
+            <h2 class="text-2xl font-semibold">Amenazas Comunes</h2>
+            <p class="mt-2">
+                Conoce las amenazas más comunes en el mundo digital y cómo afectan tanto a individuos como a organizaciones.
+            </p>
+            <!-- Añadir más contenido aquí -->
+        </section>
+
+        <section class="mt-8 w-full md:w-2/3">
+            <h2 class="text-2xl font-semibold">Buenas Prácticas</h2>
+            <p class="mt-2">
+                Descubre las mejores prácticas para protegerte en línea y mantener tus datos a salvo.
+            </p>
+            <!-- Añadir más contenido aquí -->
+        </section>
+
+        <section class="mt-8 w-full md:w-2/3">
+            <h2 class="text-2xl font-semibold">Recursos Adicionales</h2>
+            <ul class="list-disc mt-2 ml-6">
+                <li><a href="#" class="text-blue-500 hover:underline">Artículo sobre ciberseguridad</a></li>
+                <li><a href="#" class="text-blue-500 hover:underline">Tutorial sobre protección en línea</a></li>
+                <!-- Añadir más recursos aquí -->
+            </ul>
+        </section>
+
+        <section class="mt-8 w-full md:w-2/3">
+            <h2 class="text-2xl font-semibold">Casos de Estudio</h2>
+            <p class="mt-2">
+                Examina estudios de caso de incidentes de ciberseguridad y aprende de experiencias pasadas.
+            </p>
+            <!-- Añadir más contenido aquí -->
+        </section>
+
+        <section class="mt-8 w-full md:w-2/3">
+            <h2 class="text-2xl font-semibold">Herramientas de Seguridad</h2>
+            <p class="mt-2">
+                Recomendaciones de herramientas útiles para mejorar tu seguridad en línea.
+            </p>
+            <!-- Añadir más contenido aquí -->
+        </section>
+
+        <a href="{{ url_for('recursos') }}" class="mt-6 px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700">Ver Más Recursos</a>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="flex items-center justify-between px-6 py-4 bg-gray-800">
+        <p class="text-sm">© 2024 BAK Threat Intelligence</p>
+        <div class="flex space-x-4">
+            <a href="#" class="hover:underline">Twitter</a>
+            <a href="#" class="hover:underline">LinkedIn</a>
+            <a href="#" class="hover:underline">Facebook</a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+/* styles.css */
+
+/* General styles */
+body {
+    background-color: #1a202c; /* bg-gray-900 */
+    color: #edf2f7; /* text-white */
+}
+
+/* Navigation bar styles */
+header {
+    background-color: #2d3748; /* bg-gray-800 */
+}
+
+header .nav-link {
+    color: #a0aec0; /* text-gray-500 */
+}
+
+header .nav-link:hover {
+    color: #63b3ed; /* text-blue-500 */
+}
+
+/* Main content styles */
+main {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+main h1 {
+    color: #f7fafc; /* text-white */
+}
+
+main p {
+    color: #a0aec0; /* text-gray-700 */
+}
+
+main ul li {
+    margin-bottom: 10px;
+}
+
+main ul li a {
+    color: #63b3ed; /* text-blue-500 */
+}
+
+main ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    background-color: #2d3748; /* bg-gray-800 */
+}
+
+footer p {
+    color: #a0aec0; /* text-gray-500 */
+}
+
+footer a {
+    color: #63b3ed; /* text-blue-500 */
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
