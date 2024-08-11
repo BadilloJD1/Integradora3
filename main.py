@@ -9,6 +9,7 @@ app.secret_key = 'your_secret_key'
 app.config['MONGO_URI'] = "mongodb+srv://badjuan453:Badillo12@cluster0.roexaww.mongodb.net/Integradora"
 mongo = PyMongo(app)
 
+
 # Cargar el contenido estático en una variable
 def load_static_content():
     content = ""
@@ -19,13 +20,16 @@ def load_static_content():
             content += f.read().lower()
     return content
 
+
 content = load_static_content()
+
 
 @app.route('/')
 def index():
     if 'user_id' in session:
         return render_template('inicio.html')
     return redirect(url_for('login'))
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -39,6 +43,7 @@ def login():
         else:
             flash('Login fallido. Por favor, verifica tu nombre de usuario y contraseña', 'danger')
     return render_template('login.html')
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -69,10 +74,12 @@ def register():
             return redirect(url_for('register'))
     return render_template('register.html')
 
+
 @app.route('/logout')
 def logout():
     session.pop('user_id', None)
     return redirect(url_for('login'))
+
 
 @app.route('/add', methods=['POST'])
 def add_data():
@@ -85,26 +92,25 @@ def add_data():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+
 @app.route('/informacion')
 def informacion():
     return render_template('informacion.html')
+
 
 @app.route('/datos_curiosos')
 def datos_curiosos():
     return render_template('datos_curiosos.html')
 
+
 @app.route('/que_es_ciberseguridad')
 def que_es_ciberseguridad():
     return render_template('que_es_ciberseguridad.html')
 
+
 @app.route('/info_ciberseguridad')
 def info_ciberseguridad():
     return render_template('info_ciberseguridad.html')
-
-@app.route('/listar_discusiones')
-def listar_discusiones():
-    # Lógica para listar discusiones
-    return render_template('listar_discusiones.html')
 
 @app.route('/search_static')
 def search_static():
@@ -130,6 +136,7 @@ def search_static():
 
         return render_template('search_results_text.html', query=query, results=results)
     return jsonify({'error': 'No query provided'}), 400
+
 
 if __name__ == '__main__':
     app.run(host="localhost", debug=True, port=3000)

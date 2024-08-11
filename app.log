@@ -1,0 +1,46 @@
+2024-08-10 17:49:48,828 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3000
+2024-08-10 17:49:48,828 - INFO - [33mPress CTRL+C to quit[0m
+2024-08-10 17:49:48,832 - INFO -  * Restarting with stat
+2024-08-10 17:50:29,726 - WARNING -  * Debugger is active!
+2024-08-10 17:50:29,732 - INFO -  * Debugger PIN: 109-731-880
+2024-08-10 17:52:49,238 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3000
+2024-08-10 17:52:49,238 - INFO - [33mPress CTRL+C to quit[0m
+2024-08-10 17:52:49,241 - INFO -  * Restarting with stat
+2024-08-10 17:52:59,427 - WARNING -  * Debugger is active!
+2024-08-10 17:52:59,432 - INFO -  * Debugger PIN: 109-731-880
+2024-08-10 17:53:34,827 - INFO -  * Detected change in 'C:\\Users\\baedillo\\PycharmProjects\\Integradora2\\main.py', reloading
+2024-08-10 17:53:34,992 - INFO -  * Restarting with stat
+2024-08-10 17:53:35,100 - INFO -  * Detected change in 'C:\\Users\\baedillo\\PycharmProjects\\Integradora2\\main.py', reloading
+2024-08-10 17:53:35,215 - INFO -  * Restarting with stat
+2024-08-10 17:53:44,785 - WARNING -  * Debugger is active!
+2024-08-10 17:53:44,791 - INFO -  * Debugger PIN: 109-731-880
+2024-08-10 17:53:53,232 - WARNING -  * Debugger is active!
+2024-08-10 17:53:53,236 - INFO -  * Debugger PIN: 109-731-880
+2024-08-10 17:55:40,153 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3000
+2024-08-10 17:55:40,154 - INFO - [33mPress CTRL+C to quit[0m
+2024-08-10 17:55:40,155 - INFO -  * Restarting with stat
+2024-08-10 17:55:49,877 - WARNING -  * Debugger is active!
+2024-08-10 17:55:49,882 - INFO -  * Debugger PIN: 109-731-880
+2024-08-10 17:55:58,742 - INFO -  * Detected change in 'C:\\Users\\baedillo\\PycharmProjects\\Integradora2\\main.py', reloading
+2024-08-10 17:55:58,859 - INFO -  * Restarting with stat
+2024-08-10 17:55:58,868 - INFO -  * Detected change in 'C:\\Users\\baedillo\\PycharmProjects\\Integradora2\\main.py', reloading
+2024-08-10 17:55:58,971 - INFO -  * Restarting with stat
+2024-08-10 17:56:12,563 - WARNING -  * Debugger is active!
+2024-08-10 17:56:12,568 - INFO -  * Debugger PIN: 109-731-880
+2024-08-10 17:56:21,122 - WARNING -  * Debugger is active!
+2024-08-10 17:56:21,128 - INFO -  * Debugger PIN: 109-731-880
+2024-08-10 17:56:37,552 - INFO -  * Detected change in 'C:\\Users\\baedillo\\PycharmProjects\\Integradora2\\main.py', reloading
+2024-08-10 17:56:37,737 - INFO -  * Restarting with stat
+2024-08-10 17:56:37,744 - INFO -  * Detected change in 'C:\\Users\\baedillo\\PycharmProjects\\Integradora2\\main.py', reloading
+2024-08-10 17:56:37,962 - INFO -  * Restarting with stat
+2024-08-10 18:09:48,558 - INFO -  * Restarting with stat
+2024-08-10 18:14:07,004 - INFO -  * Restarting with stat
+2024-08-10 18:18:35,944 - INFO -  * Restarting with stat
+2024-08-10 18:19:12,907 - INFO -  * Restarting with stat
+2024-08-10 18:19:28,846 - WARNING -  * Debugger is active!
+2024-08-10 18:19:28,854 - INFO -  * Debugger PIN: 109-731-880
+2024-08-10 18:19:32,486 - INFO -  * Detected change in 'C:\\Users\\baedillo\\PycharmProjects\\Integradora2\\main.py', reloading
+2024-08-10 18:19:32,594 - INFO -  * Restarting with stat
